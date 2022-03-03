@@ -1,8 +1,9 @@
 const chalk = require('chalk')
+const { Collection } = require('discord.js')
 
 module.exports = (Discord, client, config) => {
-  client.commands = new Discord.Collection();
-  client.aliases = new Discord.Collection();
+  client.commands = new Collection();
+  client.aliases = new Collection();
 
   require('fs').readdir('./commands', (err, files) => {
       if (files) {
