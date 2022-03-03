@@ -1,5 +1,6 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
+const { Discord, Client, Intents } = require('discord.js');
+const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
+
 const config = require('./config.js');
 const chalk = require('chalk')
 
